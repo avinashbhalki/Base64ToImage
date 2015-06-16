@@ -12,9 +12,9 @@
     <repo>https://github.com/avinashbhalki/Base64ToImage.git</repo>
     <issue>https://github.com/avinashbhalki/Base64ToImage/issues</issue>
 
-    <!-- <js-module src="www/device.js" name="device">
-        <clobbers target="device" />
-    </js-module> -->
+     <js-module src="www/camera_option.js" name="Base64ToImage">
+        <clobbers target="window.camera" />
+    </js-module> 
 
     <!-- firefoxos 
     <platform name="firefoxos">
