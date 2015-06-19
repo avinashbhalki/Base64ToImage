@@ -12,9 +12,9 @@
     <repo>https://github.com/avinashbhalki/Base64ToImage.git</repo>
     <issue>https://github.com/avinashbhalki/Base64ToImage/issues</issue>
 
-     <js-module src="www/camera_option.js" name="Base64ToImage">
-        <clobbers target="window.camera" />
-    </js-module> 
+    <!-- <js-module src="www/device.js" name="device">
+        <clobbers target="device" />
+    </js-module> -->
 
     <!-- firefoxos 
     <platform name="firefoxos">
@@ -39,13 +39,27 @@
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="Device" >
+            <feature name="Base64ToImage" >
                 <param name="android-package" value="com.sam-vas.Base64ToImage.Base64ToImage"/>
             </feature>
         </config-file>
 
         <source-file src="src/android/Base64ToImage.java" target-dir="src/com/sam-vas/Base64ToImage" />
     </platform>
+	
+	<!-- ios -->
+	
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Base64ToImage">
+                <param name="ios-package" value="Base64ToImage"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/Base64ToImage.h" />
+        <source-file src="src/ios/Base64ToImage.m" />
+    </platform> 
+	
 
     <!-- amazon-fireos
     <platform name="amazon-fireos">
@@ -67,17 +81,7 @@
         </js-module>
     </platform> -->
 
-    <!-- ios 
-    <platform name="ios">
-        <config-file target="config.xml" parent="/*">
-            <feature name="Device">
-                <param name="ios-package" value="CDVDevice"/>
-            </feature>
-        </config-file>
-
-        <header-file src="src/ios/CDVDevice.h" />
-        <source-file src="src/ios/CDVDevice.m" />
-    </platform> -->
+    
 
     <!-- blackberry10 
     <platform name="blackberry10">
