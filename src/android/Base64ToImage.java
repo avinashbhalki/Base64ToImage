@@ -1,4 +1,4 @@
-package com.samvaS.Base64ToImage;
+package com.samvas.Base64ToImage;
 
 import java.io.File;
 import java.io.FileOutputStream;
