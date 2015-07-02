@@ -28,7 +28,7 @@ public class Base64ToImage extends CordovaPlugin {
             String imageData = args.getString(0);
             String imageName = args.getString(1) + ".jpg";
 
-            File directory = new File(Environment.getExternalStorageDirectory() + "/Android/data/com.samevainc.CloseOut/cache/CapturedPhotos/");
+            File directory = new File(Environment.getExternalStorageDirectory() + "/Android/data/com.lifecyclemobile.closeout/cache/CapturedPhotos/");
 
             Log.i("Plugin", "Path: " + directory.toString());
             System.out.println();
